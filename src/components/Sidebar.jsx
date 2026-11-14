@@ -13,7 +13,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop rail */}
-      <aside className="sticky top-0 hidden h-screen w-56 shrink-0 flex-col border-r border-sidebar-border bg-sidebar text-sidebar-foreground md:flex">
+      <aside className="sticky top-0 z-10 hidden h-screen w-56 shrink-0 flex-col border-r border-sidebar-border bg-sidebar/75 text-sidebar-foreground backdrop-blur-md md:flex">
         <div className="flex h-14 items-center gap-2.5 border-b border-sidebar-border px-4">
           <div className="grid size-7 place-items-center rounded-sm bg-primary font-mono text-xs font-semibold text-primary-foreground">
             MW
@@ -44,7 +44,7 @@ export default function Sidebar() {
 
       {/* Mobile bottom bar */}
       <nav
-        className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t border-sidebar-border bg-sidebar md:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t border-sidebar-border bg-sidebar/85 backdrop-blur-md md:hidden"
         aria-label="Main"
       >
         {NAV_ITEMS.map(({ to, label, icon: Icon }) => (

@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 /** Mission-control panel with a caps label header. */
 export default function Panel({ title, icon: Icon, actions, className, bodyClassName, children }) {
   return (
-    <section className={cn("flex min-w-0 flex-col rounded-md border border-border bg-card", className)}>
+    <section className={cn("flex min-w-0 flex-col rounded-md border border-border bg-card/60 backdrop-blur-sm transition-colors duration-300 hover:border-primary/40", className)}>
       {(title || actions) && (
         <header className="flex items-center justify-between gap-3 border-b border-border px-4 py-2.5">
           <div className="flex min-w-0 items-center gap-2">

@@ -19,7 +19,7 @@ export default function Header({ onOpenAssistant }) {
   const backend = backendLabel();
 
   return (
-    <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-3 border-b border-border bg-background/95 px-4 backdrop-blur md:px-6">
+    <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-3 border-b border-border bg-background/70 px-4 backdrop-blur-md md:px-6">
       <div className="flex min-w-0 items-center gap-3">
         <span className="font-mono text-sm font-semibold text-primary md:hidden">MW</span>
         <h1 className="truncate text-base font-semibold tracking-wide">{current?.label ?? "MarsWalk"}</h1>
