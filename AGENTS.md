@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All backend calls go through `src/services/api.js`; endpoint paths, request field names and map layer sources stay `null` until the backend team confirms them, so the UI shows "pending" instead of guessing a contract.
+- App code is JavaScript (`.jsx`) in `src/components`, `src/pages`, `src/services`; route files in `src/routes/*.tsx` are thin wrappers that render a page, and `src/App.jsx` is the shell rendered by `__root.tsx` (no `main.jsx` entry on this stack).
+- Backend responses are rendered shape-tolerantly (`DataView`, `dataUtils.js`) and never transformed into derived scientific or route values in the frontend.
+- The map uses Mars CRSs registered in `src/components/map/marsProjection.js` (view in IAU_2015:49910, GeoJSON read as IAU_2015:49900); never use OpenLayers' default Web Mercator, and load OpenLayers only on the client via `LazyMarsMap`.
